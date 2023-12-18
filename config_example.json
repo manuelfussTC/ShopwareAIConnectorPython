@@ -1,8 +1,8 @@
 {
     "shopware": {
-        "client_id": "SWIAYKPXB0PRVGJKZ3VGSVJRCG",
-        "client_secret": "WWdMWTAxblUzOUdmSkpNVXlra0YyOWlYQXZYbXE2RFlDTmN1RXk",
-        "api_url": "https://beyondai-mfuss.shopware-demo.net/api/",
-        "OPENAI_API_KEY": "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"
+        "client_id": "Shopware Client ID",
+        "client_secret": "Shopware Client Secret",
+        "api_url": "https://shopware.example.com/api",
+        "OPENAI_API_KEY": "OPENAI_API_KEY"
     }
 }
