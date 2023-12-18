@@ -1,5 +1,18 @@
 import json
 import re
+from elevenlabstts import ElevenLabsTTS  # Importiere die ElevenLabsTTS Klasse
+
+
+try:
+    with open('config.json') as config_file:
+        config = json.load(config_file)
+    print("Configuration loaded successfully.")
+    tts = ElevenLabsTTS(config['shopware'][
+                            'elevenlabs'])  # Erstelle eine Instanz von ElevenLabsTTS mit dem API-Schlüssel aus der Konfiguration
+
+except Exception as e:
+    print(f"Error loading configuration: {e}")
+
 
 def parse_headers(header_string):
     # Entferne Markdown-Codeblöcke, falls vorhanden
@@ -143,6 +156,8 @@ def extract_data_from_response(response, data_type):
 
 def process_gpt_response_to_extract_headers(gpt_response):
     print("Verarbeite GPT-Antwort, um Header zu extrahieren.")
+    message1 = "Ich verarbeite die Antwort von GPT, um die Header zu extrahieren."
+    #tts.synthesize(message1)  # Nutze die synthesize Methode für Sprachausgabe
     response_content = gpt_response['choices'][0]['message']['content']
     print(f'Inhalt der GPT-Antwort: {response_content}')
     endpoints = extract_data_from_response(response_content, 'endpoint')

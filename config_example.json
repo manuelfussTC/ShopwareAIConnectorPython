@@ -1,8 +1,9 @@
 {
-    "shopware": {
-        "client_id": "Shopware Client ID",
-        "client_secret": "Shopware Client Secret",
-        "api_url": "https://shopware.example.com/api",
-        "OPENAI_API_KEY": "OPENAI_API_KEY"
-    }
+  "shopware": {
+    "client_id": "Shopware Client ID",
+    "client_secret": "Shopware Client Secret",
+    "api_url": "https://shopware.example.com/api",
+    "OPENAI_API_KEY": "OPENAI_API_KEY",
+    "elevenlabs": "elevenlabsApiKey"
+  }
 }
